@@ -1,4 +1,4 @@
-package com.example.architecturechallenge
+package com.example.architecturechallenge.data.remote
 
 data class MoviesResponse(
     val page: Int,

@@ -1,4 +1,6 @@
-package com.example.architecturechallenge
+package com.example.architecturechallenge.data.remote
+
+import com.example.architecturechallenge.data.MovieModel
 
 data class Movie(
     val adult: Boolean,
@@ -16,4 +18,12 @@ data class Movie(
     val vote_average: Double,
     val vote_count: Int,
     val favorite: Boolean
+)
+
+fun Movie.toMovieModel() = MovieModel(
+    id = id,
+    title = title,
+    overview = overview,
+    posterPath = poster_path,
+    favorite = favorite
 )

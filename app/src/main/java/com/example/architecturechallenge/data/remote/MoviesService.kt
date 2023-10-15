@@ -1,4 +1,4 @@
-package com.example.architecturechallenge
+package com.example.architecturechallenge.data.remote
 
 import retrofit2.http.GET
 
