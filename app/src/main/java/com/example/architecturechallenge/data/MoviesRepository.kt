@@ -3,7 +3,9 @@ package com.example.architecturechallenge.data
 import com.example.architecturechallenge.data.local.LocalDataSource
 import com.example.architecturechallenge.data.remote.RemoteDataSource
 import kotlinx.coroutines.flow.Flow
-class MoviesRepository(
+import javax.inject.Inject
+
+class MoviesRepository @Inject constructor(
     private val localDataSource: LocalDataSource,
     private val remoteDataSource: RemoteDataSource
 ) {

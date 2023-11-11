@@ -3,8 +3,10 @@ package com.example.architecturechallenge.data.local
 import com.example.architecturechallenge.data.MovieModel
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
+import javax.inject.Inject
 
-class LocalDataSource(private val dao: MoviesDao) {
+
+class LocalDataSource @Inject constructor(private val dao: MoviesDao) {
 
     val movies: Flow<List<MovieModel>> =
         dao.getMovies().map { movies -> movies.map { it.toMovieModel() } }

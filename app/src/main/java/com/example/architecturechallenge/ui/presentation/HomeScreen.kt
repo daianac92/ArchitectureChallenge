@@ -29,17 +29,16 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
-import androidx.lifecycle.viewmodel.compose.viewModel
+import androidx.hilt.navigation.compose.hiltViewModel
 import coil.compose.AsyncImage
 import com.example.architecturechallenge.data.MovieModel
-import com.example.architecturechallenge.data.MoviesRepository
 import com.example.architecturechallenge.ui.theme.ArchitectureChallengeTheme
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun HomeScreen(moviesRepository: MoviesRepository) {
+fun HomeScreen (viewModel: HomeViewModel = hiltViewModel()) {
+
     ArchitectureChallengeTheme {
-        val viewModel: HomeViewModel = viewModel{ HomeViewModel(moviesRepository) }
         //LiveData
         //val state by viewModel.state.ObserveAsState(MainViewModel.UiState())
 
